@@ -1,0 +1,154 @@
+.white {
+  color: rgb(150,150,150);
+}
+
+
+
+.call_color {
+  color: rgb(150,150,150);
+  /* color: rgb(0,0,0); */
+
+  transition: 0.6s;
+}
+
+.color_all:hover ~ .call_color{
+  color: rgb(0,0,0);
+}
+
+.parent .child {
+  color: blue;
+}
+
+.parent:hover .child {
+  color: red;
+}
+.parent .child:hover,
+.parent .child:hover ~ .child {
+  color: blue;
+}
+
+
+.color_Umi {
+  color: rgb(109, 86, 255);
+}
+
+.color_Honoka {
+  color: rgb(225, 174, 0);
+}
+
+.color_Nozomi {
+  color: rgb(228, 79, 255);
+}
+
+.color_Eri {
+  color: rgb(0, 187, 255);
+}
+
+.color_Nico {
+  color: rgb(225, 98, 221);
+}
+
+.color_Hana {
+  color: rgb(68, 205, 113);
+}
+
+.color_Kotori {
+  color: rgb(168, 168, 168);
+}
+
+.color_Rin {
+  color: rgb(254, 225, 85);
+}
+
+.color_Maki {
+  color: rgb(225, 98, 57);
+}
+
+.show_all:hover{
+.color_UmiHonokaNozomi:hover
+}
+
+.color_UmiHonokaNozomi {
+  background-image: linear-gradient(to right, rgb(109, 86, 255), rgb(225, 174, 0), rgb(228, 79, 255));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(50,50,50, 255);
+  transition: 0.6s;
+}
+
+.color_UmiHonokaNozomi:hover {
+  background-image: linear-gradient(to right, rgb(109, 86, 255), rgb(225, 174, 0), rgb(228, 79, 255));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  /* transition: 0.5s; */
+}
+
+.color_EriNicoHana {
+  background-image: linear-gradient(to right, rgb(0, 187, 255), rgb(225, 98, 221), rgb(68, 205, 113));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(50,50,50, 255);
+  transition: 0.6s;
+}
+
+.color_EriNicoHana:hover {
+  background-image: linear-gradient(to right, rgb(0, 187, 255), rgb(225, 98, 221), rgb(68, 205, 113));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.color_KotoriRinMaki {
+  background-image: linear-gradient(to right, rgb(168, 168, 168), rgb(254, 225, 85), rgb(225, 98, 57));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(50,50,50, 255);
+  transition: 0.6s;
+}
+
+.color_KotoriRinMaki:hover {
+  background-image: linear-gradient(to right, rgb(168, 168, 168), rgb(254, 225, 85), rgb(225, 98, 57));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.color_all {
+  background-image: linear-gradient(to right, rgb(109, 86, 255), rgb(225, 174, 0), rgb(228, 79, 255), rgb(0, 187, 255), rgb(225, 98, 221), rgb(68, 205, 113), rgb(168, 168, 168), rgb(254, 225, 85), rgb(225, 98, 57));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(50,50,50, 255);
+  transition: 0.6s;
+}
+
+.color_all:hover {
+  background-image: linear-gradient(to right, rgb(109, 86, 255), rgb(225, 174, 0), rgb(228, 79, 255), rgb(0, 187, 255), rgb(225, 98, 221), rgb(68, 205, 113), rgb(168, 168, 168), rgb(254, 225, 85), rgb(225, 98, 57));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+
+
+.font_call {
+  font-size: 30px;
+}
+
+.font_song {
+  font-size: 60px;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+  /* font-size: 60px; */
+}
