@@ -1,6 +1,7 @@
 let pts = [];
 let ptl = [];
 let stored = [];
+let nstored = [];
 let lstored = [];
 let length = 0;
 let llength = 0;
@@ -30,6 +31,7 @@ function key_control() {
       if (bezier_mode) {
         if (length > 0) {
           stored.splice(length - 1, 1);
+          nstored.splice(length - 1, 1);
           length -= 1;
           released = false;
         }
@@ -65,6 +67,7 @@ function undo(){
     if (bezier_mode) {
       if (length > 0) {
         stored.splice(length - 1, 1);
+        nstored.splice(length - 1, 1)
         length -= 1;
         released = false;
       }
@@ -175,20 +178,25 @@ function bezier_control() {
 function generate(){
   lp = ["["]
   rp = ["]"]
-  document.getElementById('g0').innerHTML = "bezier(" + join(stored[0],",") + ")"
-  document.getElementById('g1').innerHTML = "bezier(" + join(stored[1],",") + ")"
-  document.getElementById('g2').innerHTML = "bezier(" + join(stored[2],",") + ")"
-  document.getElementById('g3').innerHTML = "bezier(" + join(stored[3],",") + ")"
-  document.getElementById('g4').innerHTML = "bezier(" + join(stored[4],",") + ")"
-  document.getElementById('g5').innerHTML = "bezier(" + join(stored[5],",") + ")"
-  document.getElementById('g6').innerHTML = "bezier(" + join(stored[6],",") + ")"
-  document.getElementById('g7').innerHTML = "bezier(" + join(stored[7],",") + ")"
+for(i=0;i<=24;i++){
+    document.getElementById(('g'+str(i))).innerHTML = "bezier(" + join(nstored[i],",") + ")"
+}
 
+  // document.getElementById('g0').innerHTML = "bezier(" + join(nstored[0],",") + ")"
+  // document.getElementById('g1').innerHTML = "bezier(" + join(nstored[1],",") + ")"
+  // document.getElementById('g2').innerHTML = "bezier(" + join(nstored[2],",") + ")"
+  // document.getElementById('g3').innerHTML = "bezier(" + join(nstored[3],",") + ")"
+  // document.getElementById('g4').innerHTML = "bezier(" + join(nstored[4],",") + ")"
+  // document.getElementById('g5').innerHTML = "bezier(" + join(nstored[5],",") + ")"
+  // document.getElementById('g6').innerHTML = "bezier(" + join(nstored[6],",") + ")"
+  // document.getElementById('g7').innerHTML = "bezier(" + join(nstored[7],",") + ")"
+  // document.getElementById('g8').innerHTML = "bezier(" + join(nstored[8],",") + ")"
 
 }
 
 function store_bezier_draw() {
   append(stored, [int(x0), int(y0), int(x1), int(y1), int(x2), int(y2), int(x3), int(y3)]);
+  append(nstored, [0,0,0,0,0,0,0,0]);
   // print(stored)
   print("bezier", stored[length]);
   length += 1;
@@ -253,9 +261,7 @@ pop();
 
 slider.oninput = function() {
 
-//   for(i=0;i<stored.length;i++){
-//   stored[i] = stored[i].map(v=> v)
-// }
+
 
 }
 
@@ -275,4 +281,9 @@ function draw() {
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     output.innerHTML = float(slider.value).toFixed(2);
+
+    for(i=0;i<stored.length;i++){
+    nstored[i] = stored[i].map(v=> v*slider.value)
+    nstored[i] = nstored[i].map(v=> int(v))
+    }
 }
