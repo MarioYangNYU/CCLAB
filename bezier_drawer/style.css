@@ -1,0 +1,237 @@
+body {background-color: rgb(220,220,220);}
+
+#scriptContainer {
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(45vw - 500px)
+}
+
+#title {
+  position: absolute;
+  text-align: center
+  top: 3vh;
+  left: calc(57vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+#button_pos_draw{
+  height:100px;
+width:180px;
+  position: absolute;
+  top: 10vh;
+  left: calc(62vw - 90px);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 35px;
+
+}
+
+#button_pos_switch{
+  height:100px;
+  width:180px;
+  position: absolute;
+  top: 10vh;
+  left: calc(82vw - 90px);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+#button_pos_undo{
+  height:100px;
+  width:180px;
+  position: absolute;
+  top: 10vh;
+  left: calc(82vw - 90px);
+    font-size: 35px;
+}
+
+/* #button_pos_undo{
+  height:100px;
+  width:180px;
+  position: absolute;
+  top: 30vh;
+  left: calc(62vw - 90px);
+} */
+
+#button_pos_generate{
+  height:100px;
+  width:437px;
+  position: absolute;
+  top: 30vh;
+  left: calc(61.9vw - 90px);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 40px;
+
+}
+
+
+.generated0{
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+  left: calc(49vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+.generated1{
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+  left: calc(74.8vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated2{
+  position: absolute;
+  top: 53vh;
+  text-align: center;
+  left: calc(49vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated3{
+  position: absolute;
+  top: 53vh;
+  text-align: center;
+  left: calc(74.8vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated4{
+  position: absolute;
+  top: 56vh;
+  text-align: center;
+  left: calc(49vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated5{
+  position: absolute;
+  top: 56vh;
+  text-align: center;
+  left: calc(74.8vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated6{
+  position: absolute;
+  top: 59vh;
+  text-align: center;
+  left: calc(49vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.generated7{
+  position: absolute;
+  top: 59vh;
+  text-align: center;
+  left: calc(74.8vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+
+.styled {
+    border: 0;
+    line-height: 10vh;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(200, 200, 200, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgba(220, 220, 220, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+
+.slidecontainer {
+  width: 50%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 15px;
+  border-radius: 5px;
+  background: rgb(100,100,100);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  position: absolute;
+  top: 60vh;
+  left: calc(49vw);
+
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(50,50,50);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(50,50,50);
+  cursor: pointer;
+}
+
+.cuspos{
+  position: absolute;
+  top: 70vh;
+  text-align: center;
+  left: calc(74.8vw);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+
+/* html, body {
+  height: 100%;
+} */
+
+/* .centered {
+  margin: 0;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+} */
+
+/* body {
+  margin: 0;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+.centered {position: absolute;
+left: 100px;
+top: 250px;} */
