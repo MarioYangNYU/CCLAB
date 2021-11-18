@@ -45,6 +45,8 @@ width:180px;
   top: 10vh;
   left: calc(82vw - 90px);
     font-size: 35px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 
 /* #button_pos_undo{
