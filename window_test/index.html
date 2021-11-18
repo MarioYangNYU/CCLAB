@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script source src="js/p5.js"> </script>
+</head>
+
+
+<body>
+
+
+
+  <button onclick="openWin()">Open </button>
+  <button onclick="trigWin()">Move </button>
+  <button onclick="openWin()">Activate </button>
+  <button onclick="closeWin()">Close </button>
+
+
+  <script>
+    var w1;
+    var w2;
+    var w3;
+    var w4;
+    var manager;
+    var moving = false
+
+    windowList = []
+
+
+    function setup(){
+      bpm = 100;
+      spb = (1 / (bpm / 60)) * 1000;
+      drift = 0;
+      beat = 8;
+      startTime = 0;
+      endTime = 0;
+      counter = 0;
+    }
+
+    function createWin(x,y,w,h){
+    tempWin = window.open("p1.html","","width="+str(w)+", height="+str(h));
+    tempWin.moveTo(x, y);
+    }
+
+    function openWin() {
+
+      // manager = window.open("manager.html","","width=100, height=100");
+
+      for(i=0;i<8;i++){
+      // createWin(150*i,300,250,300);
+      createWin(0,0,250,300);
+      windowList.push(tempWin)
+      }
+
+
+      // w1 = window.open("p1.html","","width=250, height=300");
+      // w1.moveTo(100, 300);
+      // w2 = window.open("p1.html","","width=250, height=300");
+      // w2.moveTo(400, 300);
+      // w3 = window.open("p1.html","","width=250, height=300");
+      // w3.moveTo(700, 300);
+      // w4 = window.open("p1.html","","width=250, height=300");
+      // w4.moveTo(1000, 300);
+      //
+      //
+      // windowList.push(w1)
+      // windowList.push(w2)
+      // windowList.push(w3)
+      // windowList.push(w4)
+    }
+
+    function trigWin() {
+      moving = !moving
+    }
+
+    function mv(win,x,y,w,h){
+    win.moveBy(x,y);
+    win.resizeTo(w,h);
+    }
+
+
+
+    function moveWin() {
+      // w1.moveBy(3, 3);
+      // w1.resizeTo(250, 300);
+
+    // for(i=0;i<=windowList.length-1;i++){
+    // windowList[i].moveBy(0,-1);
+    //   }
+
+    endTime = millis();
+    // console.log(endTime - startTime, spb / beat - drift)
+
+    if (endTime - startTime >= spb / beat - drift) {
+      counter += 1;
+      for(j=0;j<=8;j++){
+      if(counter%8==j){
+        for(i=0;i<=windowList.length-1;i++){
+        windowList[i].moveTo(i*100,100+j*100);
+        windowList[i].resizeTo(250, 300);
+            }
+          }
+      }
+      startTime = millis();
+      drift = endTime - startTime - spb / beat;
+      }
+
+
+
+    }
+
+
+
+    function closeWin(){
+    for(i=0;i<=windowList.length-1;i++){
+    windowList[i].close()}
+    windowList=[]
+
+    }
+
+    function draw() {
+
+
+      if (moving) {
+        moveWin()
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script source src="js/p5.js"> </script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+
+  <script>
+
+    function setup() {
+      bpm = 100;
+      spb = (1 / (bpm / 60)) * 1000;
+      drift = 0;
+      beat = 2;
+      startTime = 0;
+      endTime = 0;
+      counter = 0;
+      if (document.readyState === 'complete') {}
+    }
+
+    function draw() {
+
+      createCanvas(window.innerWidth, window.innerHeight)
+      background(220)
+      endTime = millis();
+      if (endTime - startTime >= spb / beat - drift) {
+        counter += 1;
+        startTime = millis();
+        drift = endTime - startTime - spb / beat;
+      }
+
+      push()
+      translate(window.innerWidth / 2, window.innerHeight / 2)
+      textAlign(CENTER, CENTER);
+      textSize(60);
+      // text(counter, 0, 0);
+      // ellipse(0,0,window.innerWidth/2, window.innerHeight/2)
+      pop()
+
+    }
+  </script>
+
+</body>
+
+</html>
