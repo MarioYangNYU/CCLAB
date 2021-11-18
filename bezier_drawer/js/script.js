@@ -179,7 +179,7 @@ function generate(){
   lp = ["["]
   rp = ["]"]
 for(i=0;i<=24;i++){
-    document.getElementById(('g'+str(i))).innerHTML = "bezier(" + join(nstored[i],",") + ")"
+    document.getElementById(('g'+str(i))).innerHTML = "bezier(" + join(nstored[i],",") + ");"
 }
 
   // document.getElementById('g0').innerHTML = "bezier(" + join(nstored[0],",") + ")"
