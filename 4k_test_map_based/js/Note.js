@@ -1,18 +1,19 @@
 class Note {
   constructor(t, p) {
     this.w = width/4.1;
-    this.h = 10;
+    this.h = 15;
     this.x = width/8 + p*width/4;
-    this.y = t;
     this.ns = 20;
     this.p = p;
     this.logged = false
     this.posLogged = false
     this.sounded = false;
+    this.t = t
+    this.out = false;
     }
 
   move() {
-    this.y += this.ns;
+    this.y = this.t + yPos;;
     if (this.y > 650 && !this.logged){
      // console.log(Date.now())
      this.logged = true
@@ -23,7 +24,8 @@ class Note {
   display() {
     push()
     fill(255)
-    rect(this.x, this.y, this.w, this.h,5);
+    imageMode(CENTER)
+    image(note,this.x, this.y, this.w, this.h);
     pop()
 
     if(this.y>=550 && !this.sounded){
@@ -45,6 +47,10 @@ class Note {
 }
 
   erase() {
+    if(this.y > 1000 && !this.out){
+      notes.splice(0,1);
+      this.out = true;
+    }
   }
 
   // keyPressed(){
